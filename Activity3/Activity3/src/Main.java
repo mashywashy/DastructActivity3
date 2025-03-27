@@ -4,7 +4,7 @@ public class Main {
 
         system.addGeneralCustomer("Alice");
         system.addGeneralCustomer("Bob");
-        system.addGeneralCustomer("Charlie");
+        system.addVipCustomer("Charlie");
         system.addVipCustomer("David");
 
 
