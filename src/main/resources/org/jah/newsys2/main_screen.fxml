@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jah.newsys2.AppController">
+    <children>
+        <!-- Maroon header -->
+        <StackPane style="-fx-background-color: #800000; -fx-background-radius: 0 0 15 15;">
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+            <children>
+                <Label text="Student Registration System" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#590000" radius="3" spread="0.2" />
+                    </effect>
+                </Label>
+            </children>
+        </StackPane>
+        <!-- Loading Overlay -->
+
+        <AnchorPane fx:id="rootPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="469.0" prefWidth="700.0" style="-fx-background-color: #f8f5f2;" VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+            <children>
+                <VBox spacing="15.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+                    <children>
+                        <!-- 2-column form layout -->
+                        <VBox prefHeight="241.0" prefWidth="644.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 25px; -fx-background-radius: 12; -fx-effect: dropshadow(gaussian, rgba(128,0,0,0.1), 12, 0, 0, 6);">
+                            <children>
+                                <!-- Row 1 -->
+                                <HBox spacing="30.0">
+                                    <children>
+                                        <!-- Column 1 -->
+                                        <VBox prefWidth="300.0" spacing="15.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" style="-fx-text-fill: #4a4a4a; -fx-font-family: 'Segoe UI'; -fx-font-size: 14;" text="Name:" />
+                                                        <TextField fx:id="nameField" prefWidth="200.0" promptText="Full name" style="-fx-background-radius: 6; -fx-border-color: #d0d0d0; -fx-border-radius: 6; -fx-padding: 8;">
+                                                            <effect>
+                                                                <DropShadow color="#00000015" height="3.0" radius="2.0" width="3.0" />
+                                                            </effect>
+                                                        </TextField>
+                                                    </children>
+                                                </HBox>
+
+                                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" style="-fx-text-fill: #4a4a4a; -fx-font-family: 'Segoe UI'; -fx-font-size: 14;" text="ID Number:" />
+                                                        <TextField fx:id="idNumberField" prefWidth="200.0" promptText="Student ID" style="-fx-background-radius: 6; -fx-border-color: #d0d0d0; -fx-border-radius: 6; -fx-padding: 8;">
+                                                            <effect>
+                                                                <DropShadow color="#00000015" height="3.0" radius="2.0" width="3.0" />
+                                                            </effect>
+                                                        </TextField>
+                                                    </children>
+                                                </HBox>
+
+                                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" style="-fx-text-fill: #4a4a4a; -fx-font-family: 'Segoe UI'; -fx-font-size: 14;" text="Program:" />
+                                                        <ComboBox fx:id="programComboBox" prefWidth="200.0" promptText="Select program" style="-fx-background-radius: 6; -fx-border-color: #d0d0d0; -fx-border-radius: 6; -fx-padding: 4;">
+                                                            <effect>
+                                                                <DropShadow color="#00000015" height="3.0" radius="2.0" width="3.0" />
+                                                            </effect>
+                                                        </ComboBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+
+
+                                        <!-- Column 2 -->
+                                        <VBox prefWidth="300.0" spacing="15.0">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                    <children>
+                                                        <Label prefHeight="18.0" prefWidth="106.0" style="-fx-text-fill: #4a4a4a; -fx-font-family: 'Segoe UI'; -fx-font-size: 14;" text="New Student:" />
+                                                        <ComboBox fx:id="newStudentComboBox" prefHeight="36.0" prefWidth="160.0" promptText="Select status" style="-fx-background-radius: 6; -fx-border-color: #d0d0d0; -fx-border-radius: 6; -fx-padding: 4;">
+                                                            <effect>
+                                                                <DropShadow color="#00000015" height="3.0" radius="2.0" width="3.0" />
+                                                            </effect>
+                                                        </ComboBox>
+                                                    </children>
+                                                </HBox>
+
+                                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" style="-fx-text-fill: #4a4a4a; -fx-font-family: 'Segoe UI'; -fx-font-size: 14;" text="Year Level:" />
+                                                        <ComboBox fx:id="yearLevelComboBox" disable="true" prefWidth="200.0" promptText="Select year" style="-fx-background-color: #f8f8f8; -fx-background-radius: 6; -fx-border-color: #e0e0e0; -fx-border-radius: 6;">
+                                                        </ComboBox>
+                                                    </children>
+                                                </HBox>
+
+                                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" style="-fx-text-fill: #4a4a4a; -fx-font-family: 'Segoe UI'; -fx-font-size: 14;" text="Semester:" />
+                                                        <ComboBox fx:id="semesterComboBox" disable="true" prefWidth="200.0" promptText="Select semester" style="-fx-background-color: #f8f8f8; -fx-background-radius: 6; -fx-border-color: #e0e0e0; -fx-border-radius: 6;">
+                                                        </ComboBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <!-- Full-width row -->
+                                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                    <children>
+                                        <Label style="-fx-text-fill: #4a4a4a; -fx-font-family: 'Segoe UI'; -fx-font-size: 14;" text="Recent Subjects:" />
+                                        <TextField fx:id="subjectsField" disable="true" prefHeight="36.0" prefWidth="269.0" promptText="Number of subjects" style="-fx-background-radius: 6; -fx-border-color: #d0d0d0; -fx-border-radius: 6; -fx-padding: 8;">
+                                            <effect>
+                                                <DropShadow color="#00000015" height="3.0" radius="2.0" width="3.0" />
+                                            </effect>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <StackPane fx:id="loadingPane" style="-fx-background-color: rgba(255,255,255,0.8);" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <VBox alignment="CENTER" spacing="10">
+                                        <ImageView fx:id="loadingGif" fitHeight="100" fitWidth="100">
+                                            <image>
+                                                <Image url="@loading.gif" />
+                                            </image>
+                                        </ImageView>
+                                        <Label style="-fx-text-fill: #800000; -fx-font-size: 16;" text="Generating Recommendations..." />
+                                    </VBox>
+                                </StackPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER_RIGHT" spacing="15.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="40.0">
+                    <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" style="-fx-background-color: #a0a0a0; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="Cancel">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="nextButton" mnemonicParsing="false" style="-fx-background-color: #800000; -fx-text-fill: white; -fx-background-radius: 6; -fx-cursor: hand;" text="Next">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                            </padding>
+                            <effect>
+                                <DropShadow color="#00000035" height="5.0" radius="3.0" width="5.0" />
+                            </effect>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
